@@ -27,8 +27,8 @@ public class SpeechRecognition : MonoBehaviour
         {
             StartRecording();
         }
-        else if (isRecording &&
-            (Input.GetKeyDown(KeyCode.Space) == false || Microphone.GetPosition(null) >= clip.samples)) //??
+        else if (isRecording && Input.GetKey(KeyCode.Space) == false)
+        //(Input.GetKeyDown(KeyCode.Space) == false || Microphone.GetPosition(null) >= clip.samples)) //??
         {
             StopRecording();
         }
@@ -89,6 +89,9 @@ public class SpeechRecognition : MonoBehaviour
         var position = Microphone.GetPosition(null);
         Microphone.End(null);
         var samples = new float[position * clip.channels];
+        Debug.Log(position);
+        Debug.Log(clip.channels);
+        Debug.Log(samples);
         clip.GetData(samples, 0);
         bytes = EncodeAsWAV(samples, clip.frequency, clip.channels);
         isRecording = false;
