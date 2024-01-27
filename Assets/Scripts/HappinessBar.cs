@@ -5,12 +5,7 @@ using UnityEngine.UI;
 
 public class HappinessBar : MonoBehaviour
 {
-    private Slider slider;
-
-    public void Start()
-    {
-        slider = GetComponent<Slider>();
-    }
+    [SerializeField] Slider slider;
 
     [ContextMenu("Set max value of happiness bar")]
     public void SetMax(float maxVal)

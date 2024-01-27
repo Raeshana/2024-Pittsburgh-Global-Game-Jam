@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Greyscale : MonoBehaviour
 {
+    [SerializeField] GameObject colored;
     private SpriteRenderer renderer;
-    [SerializeField] Material material1; 
-    [SerializeField] Material material2; 
 
-    private float currTime = 0f; 
-    private float maxTime = 1f;
+    private float currAlpha = 0f;
+    private float maxAlpha = 1f;
 
     private HappinessBar happinessBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        renderer = colored.GetComponent<SpriteRenderer>();
+
         happinessBar = GetComponentInChildren<HappinessBar>();
-        happinessBar.SetMax(maxTime);
+        happinessBar.SetMax(maxAlpha);
+
+        renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
     }
 
     [ContextMenu("If player is in a room and is laughing, the person gets less greyscale")]
@@ -26,9 +28,9 @@ public class Greyscale : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>().isLaughing)
         {
-            currTime += 0.1f;
-            happinessBar.UpdateBar(currTime);
-            renderer.material.Lerp(material1, material2, currTime);
+            currAlpha += 0.1f;
+            renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
+            happinessBar.UpdateBar(currAlpha);
         }
     }
 }

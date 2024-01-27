@@ -13,6 +13,6 @@ public class Laugh : MonoBehaviour
     [ContextMenu("Executes if player is laughing")]
     public void LaughFn()
     {
-        Debug.Log("laughing");
+        //Debug.Log("laughing");
     }
 }
