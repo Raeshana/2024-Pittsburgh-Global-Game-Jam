@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using System.IO;
 using HuggingFace.API;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class SpeechRecognition : MonoBehaviour
 {
@@ -21,6 +19,8 @@ public class SpeechRecognition : MonoBehaviour
     }
 
     // Update is called once per frame
+
+
     void Update()
     {
         if (!isRecording && Input.GetKeyDown(KeyCode.Space) == true)
@@ -36,7 +36,9 @@ public class SpeechRecognition : MonoBehaviour
 
     private void StartRecording()
     {
-        clip = Microphone.Start(null, false, 30, 44100); // with the default device, non-looping, up to 30 seconds, at 44 khz
+        text.color = Color.cyan;
+        text.text = "Recording...";
+        clip = Microphone.Start(null, false, 10, 44100); // with the default device, non-looping, up to 30 seconds, at 44 khz
         isRecording = true;
     }
 
@@ -49,7 +51,7 @@ public class SpeechRecognition : MonoBehaviour
                 writer.Write("RIFF".ToCharArray());
                 writer.Write(36 + samples.Length * 2);
                 writer.Write("WAVE".ToCharArray());
-                writer.Write("fmt".ToCharArray());
+                writer.Write("fmt ".ToCharArray());
                 writer.Write(16);
                 writer.Write((ushort)1);
                 writer.Write((ushort)channels);
@@ -65,17 +67,19 @@ public class SpeechRecognition : MonoBehaviour
                     writer.Write((short)(sample * short.MaxValue));
                 }
             }
-
             return memoryStream.ToArray();
         }
     }
 
     private void SendRecording()
     {
-        HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response =>
-        {
+        text.color = Color.yellow;
+        text.text = "Sending...";
+        HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
+            text.color = Color.white;
             text.text = response;
         }, error => {
+            text.color = Color.red;
             text.text = error;
         });
     }
