@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Road
+    uniqueID: 1288144147
+    locked: 0
+  - name: Path
+    uniqueID: 2556800001
+    locked: 0
   - name: Room floor
     uniqueID: 1022439307
     locked: 0
