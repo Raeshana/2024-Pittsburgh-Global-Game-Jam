@@ -11,13 +11,14 @@ public class Greyscale : MonoBehaviour
     private float currTime = 0f; 
     private float maxTime = 1f;
 
-    [SerializeField] HappinessBar happinessBar;
+    private HappinessBar happinessBar;
 
     // Start is called before the first frame update
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
         happinessBar = GetComponentInChildren<HappinessBar>();
+        happinessBar.SetMax(maxTime);
     }
 
     [ContextMenu("If player is in a room and is laughing, the person gets less greyscale")]
@@ -26,7 +27,7 @@ public class Greyscale : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>().isLaughing)
         {
             currTime += 0.1f;
-            happinessBar.UpdateBar(currTime, maxTime);
+            happinessBar.UpdateBar(currTime);
             renderer.material.Lerp(material1, material2, currTime);
         }
     }

@@ -12,8 +12,14 @@ public class HappinessBar : MonoBehaviour
         slider = GetComponent<Slider>();
     }
 
+    [ContextMenu("Set max value of happiness bar")]
+    public void SetMax(float maxVal)
+    {
+        slider.maxValue = maxVal;
+    }
+
     [ContextMenu("Changes value of happiness bar")]
-    public void UpdateBar(float currVal, float maxVal)
+    public void UpdateBar(float currVal)
     {
         slider.value = currVal;
     }
