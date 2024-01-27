@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     private float directionX;
     private float directionY;
 
-    private Tickle playerTickle;
+    private Laugh playerLaugh;
+    public bool isLaughing = false; 
 
     private bool isFacingRight = true;
 
@@ -16,13 +17,13 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerMove = GetComponent<Movement>();
-        playerTickle = GetComponent<Tickle>();
+        playerLaugh = GetComponent<Laugh>();
     }
 
     void Update()
     {
         PlayerMove();
-        PlayerTickle();
+        PlayerLaugh();
         PlayerFlip();
     }
 
@@ -35,12 +36,17 @@ public class PlayerController : MonoBehaviour
         playerMove.MoveFn(directionX, directionY);
     }
 
-    [ContextMenu("Takes input for player tickle")]
-    private void PlayerTickle()
+    [ContextMenu("Detects if player is laughing")]
+    private void PlayerLaugh()
     {
         if(Input.GetButton("Fire1"))
         {
-            playerTickle.TickleFn();
+            playerLaugh.LaughFn();
+            isLaughing = true;
+        }
+        else
+        {
+            isLaughing = false;
         }
     }
 

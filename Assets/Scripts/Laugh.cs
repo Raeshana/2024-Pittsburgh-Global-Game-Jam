@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tickle : MonoBehaviour
+public class Laugh : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -10,9 +10,9 @@ public class Tickle : MonoBehaviour
         
     }
 
-    [ContextMenu("Player tickle")]
-    public void TickleFn()
+    [ContextMenu("Executes if player is laughing")]
+    public void LaughFn()
     {
-        Debug.Log("tickling");
+        Debug.Log("laughing");
     }
 }
