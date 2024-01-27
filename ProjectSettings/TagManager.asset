@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Persons
+  - Tiles
   - 
   - 
   - 
@@ -52,4 +52,10 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 1542566181
+    locked: 0
+  - name: Person
+    uniqueID: 1233138383
+    locked: 0
+  - name: Player
+    uniqueID: 3365437453
     locked: 0
