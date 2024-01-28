@@ -28,7 +28,7 @@ public class SpeechRecognition : MonoBehaviour
 
     void Update()
     {
-        if (!isRecording && Input.GetKeyDown(KeyCode.Space) == true)
+        if (!isRecording && Input.GetKey(KeyCode.Space) == true)
         {
             StartRecording();
         }
