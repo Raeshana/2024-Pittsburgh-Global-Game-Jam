@@ -5,7 +5,11 @@ using System.Text.RegularExpressions;
 
 public class PlayerController : MonoBehaviour
 {
+
     private Movement playerMove;
+    [SerializeField] private AudioSource footstepSound;
+    private Rigidbody2D rb;
+
     private float directionX;
     private float directionY;
 
@@ -18,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         playerMove = GetComponent<Movement>();
         playerLaugh = GetComponent<Laugh>();
         laughter_count = -1;
@@ -27,6 +32,11 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMove();
         PlayerFlip();
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow)
+            || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            footstepSound.Play();
+        }
     }
 
     [ContextMenu("Takes input for player movement")]
