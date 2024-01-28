@@ -71092,6 +71092,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1837713276256753670, guid: 73beda7f256be30478b8c62d73822458, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837713276256753670, guid: 73beda7f256be30478b8c62d73822458, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837713276256753670, guid: 73beda7f256be30478b8c62d73822458, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3725814154534097026, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -71106,11 +71118,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: InitialModule.startSize.minScalar
@@ -71118,11 +71134,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4058966781548048863, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7518652352164772469, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_Name
