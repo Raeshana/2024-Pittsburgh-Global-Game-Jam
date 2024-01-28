@@ -5,10 +5,14 @@ using UnityEngine;
 public class Greyscale : MonoBehaviour
 {
     [SerializeField] GameObject colored;
+    //[SerializeField] GameObject player;
     private SpriteRenderer this_renderer;
+    //private Rigidbody2D rb;
 
-    private float currAlpha = 0f;
-    private float maxAlpha = 1f;
+    public float currAlpha = 0f;
+    public float maxAlpha = 1f;
+
+    public int alpha_increase_speed = 5;
 
     //private HappinessBar happinessBar;
 
@@ -19,6 +23,7 @@ public class Greyscale : MonoBehaviour
     void Start()
     {
         this_renderer = colored.GetComponent<SpriteRenderer>();
+        //rb = GetComponent<Rigidbody2D>();
 
         //happinessBar = GetComponentInChildren<HappinessBar>();
         //happinessBar.SetMax(maxAlpha);
@@ -26,19 +31,18 @@ public class Greyscale : MonoBehaviour
         this_renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
     }
 
-    [ContextMenu("If player is in a room and is laughing, the person gets less greyscale")]
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerController>().isLaughing)
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerController>().isLaughing)
         {
             if (!isHappy)
             {
-                currAlpha += 0.1f;
+                currAlpha += 0.1f * collision.gameObject.GetComponent<PlayerController>().laughter_count * alpha_increase_speed;
                 this_renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
                 //happinessBar.UpdateBar(currAlpha);
             }
 
-            if(currAlpha >= maxAlpha)
+            if (currAlpha >= maxAlpha)
             {
                 isHappy = true;
             }

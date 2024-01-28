@@ -578,7 +578,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -592,7 +592,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: 1.25}
   m_EdgeRadius: 0
 --- !u!114 &7099221509978140224
 MonoBehaviour:
@@ -607,6 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colored: {fileID: 164095172091058514}
+  player: {fileID: 7518652352164772469, guid: 73beda7f256be30478b8c62d73822458, type: 3}
+  distanceBtw: 0
   isHappy: 0
 --- !u!114 &572740530050480950
 MonoBehaviour:
@@ -620,7 +622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea070f5291a4454a9d4f7a99111e499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 0}
 --- !u!1 &8206096882369494052
 GameObject:
   m_ObjectHideFlags: 0

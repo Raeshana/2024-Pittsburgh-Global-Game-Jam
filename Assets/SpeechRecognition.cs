@@ -19,7 +19,7 @@ public class SpeechRecognition : MonoBehaviour
     void Start()
     {
         recordedText = "";
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
         pc = player.GetComponent<PlayerController>();
     }
 

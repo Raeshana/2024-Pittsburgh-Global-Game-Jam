@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class PlayerController : MonoBehaviour
     private float directionY;
 
     private Laugh playerLaugh;
-    public bool isLaughing = false; 
+    public bool isLaughing = false;
+    public int laughter_count;
 
     private bool isFacingRight = true;
 
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         playerMove = GetComponent<Movement>();
         playerLaugh = GetComponent<Laugh>();
+        laughter_count = -1;
     }
 
     void Update()
@@ -38,8 +41,9 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Detects if player is laughing")]
     public void IsPlayerLaughing(string recordedText)
     {
+        laughter_count = Regex.Matches(recordedText, "ha").Count;
 
-        if(recordedText.ToLower().Contains("ha"))
+        if (laughter_count > 0)
         {
             playerLaugh.LaughFn();
             isLaughing = true;
