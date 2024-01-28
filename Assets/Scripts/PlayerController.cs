@@ -34,14 +34,13 @@ public class PlayerController : MonoBehaviour
     {
         directionX = Input.GetAxis("Horizontal");
         directionY = Input.GetAxis("Vertical");
-        //Debug.Log(directionX);
         playerMove.MoveFn(directionX, directionY);
     }
 
     [ContextMenu("Detects if player is laughing")]
     public void IsPlayerLaughing(string recordedText)
     {
-        laughter_count = Regex.Matches(recordedText, "ha").Count;
+        laughter_count = Regex.Matches(recordedText.ToLower(), "ha").Count;
 
         if (laughter_count > 0)
         {
