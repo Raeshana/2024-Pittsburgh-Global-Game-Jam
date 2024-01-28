@@ -75,10 +75,12 @@ public class SpeechRecognition : MonoBehaviour
     {
         text.color = Color.yellow;
         text.text = "Sending...";
-        HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
+        HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response =>
+        {
             text.color = Color.white;
             text.text = response;
-        }, error => {
+        }, error =>
+        {
             text.color = Color.red;
             text.text = error;
         });
@@ -89,9 +91,9 @@ public class SpeechRecognition : MonoBehaviour
         var position = Microphone.GetPosition(null);
         Microphone.End(null);
         var samples = new float[position * clip.channels];
-        Debug.Log(position);
-        Debug.Log(clip.channels);
-        Debug.Log(samples);
+        //Debug.Log(position);
+        //Debug.Log(clip.channels);
+        //Debug.Log(samples);
         clip.GetData(samples, 0);
         bytes = EncodeAsWAV(samples, clip.frequency, clip.channels);
         isRecording = false;
