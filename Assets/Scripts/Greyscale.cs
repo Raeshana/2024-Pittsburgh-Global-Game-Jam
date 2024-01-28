@@ -36,7 +36,7 @@ public class Greyscale : MonoBehaviour
             {
                 if (!isHappy)
                 {
-                    currTime += pc.laughter_count * alpha_increase_speed;
+                    currTime += 0.01f * pc.laughter_count * alpha_increase_speed;
                     this_renderer.color = Color.Lerp(Color.black, Color.white, currTime);
                     pc.isLaughing = false;
                     pc.laughter_count = 0;

@@ -41,7 +41,7 @@ public class SpeechRecognition : MonoBehaviour
 
     private void StartRecording()
     {
-        text.color = Color.cyan;
+        text.color = Color.yellow;
         text.text = "Recording...";
         clip = Microphone.Start(null, false, 10, 44100); // with the default device, non-looping, up to 30 seconds, at 44 khz
         isRecording = true;
@@ -88,7 +88,7 @@ public class SpeechRecognition : MonoBehaviour
             pc.IsPlayerLaughing(response);
         }, error =>
         {
-            text.color = Color.red;
+            text.color = Color.black;
             text.text = error;
         });
     }
