@@ -25267,18 +25267,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682112595}
     m_Modifications:
-    - target: {fileID: 3208878003360557915, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208878003360557915, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208878003360557915, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4382668000214853849, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3500698
@@ -25347,6 +25335,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2011704582}
+    - target: {fileID: 7335472983157719730, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31669,7 +31661,7 @@ RectTransform:
   m_GameObject: {fileID: 397616783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3297398094982455467}
@@ -31697,7 +31689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -78394,11 +78386,7 @@ Transform:
   m_GameObject: {fileID: 1950285781}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
   m_LocalPosition: {x: -1.73, y: 53.7, z: -10}
-=======
-  m_LocalPosition: {x: -16.27, y: 18.79, z: -10}
->>>>>>> 4b207c2c822afa07b22481c34ce25a20abdcd0ad
   m_LocalScale: {x: 1.1584681, y: 1.7822591, z: 1.7822591}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78670,18 +78658,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8
       objectReference: {fileID: 0}
@@ -78723,15 +78699,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1837713276256753670, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1837713276256753670, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1837713276256753670, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3725814154534097026, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -78773,10 +78749,6 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.minScalar
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4146696251747712787, guid: 73beda7f256be30478b8c62d73822458, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 395a720bd5c7feb4c9560de977d6245f, type: 3}
     - target: {fileID: 7518652352164772469, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_Name
       value: Player
