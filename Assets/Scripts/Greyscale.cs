@@ -10,15 +10,18 @@ public class Greyscale : MonoBehaviour
     private float currAlpha = 0f;
     private float maxAlpha = 1f;
 
-    private HappinessBar happinessBar;
+    //private HappinessBar happinessBar;
+
+    [HideInInspector]
+    public bool isHappy = false;
 
     // Start is called before the first frame update
     void Start()
     {
         renderer = colored.GetComponent<SpriteRenderer>();
 
-        happinessBar = GetComponentInChildren<HappinessBar>();
-        happinessBar.SetMax(maxAlpha);
+        //happinessBar = GetComponentInChildren<HappinessBar>();
+        //happinessBar.SetMax(maxAlpha);
 
         renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
     }
@@ -28,9 +31,17 @@ public class Greyscale : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>().isLaughing)
         {
-            currAlpha += 0.1f;
-            renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
-            happinessBar.UpdateBar(currAlpha);
+            if (!isHappy)
+            {
+                currAlpha += 0.1f;
+                renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
+                //happinessBar.UpdateBar(currAlpha);
+            }
+
+            if(currAlpha >= maxAlpha)
+            {
+                isHappy = true;
+            }
         }
     }
 }
