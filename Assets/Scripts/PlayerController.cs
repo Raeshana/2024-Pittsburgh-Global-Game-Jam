@@ -32,8 +32,8 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMove();
         PlayerFlip();
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.RightArrow)
-            || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow)
+            || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             footstepSound.Play();
         }
