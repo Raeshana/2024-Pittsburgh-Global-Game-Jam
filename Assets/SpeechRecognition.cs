@@ -7,15 +7,20 @@ using UnityEngine.UI;
 public class SpeechRecognition : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
+    public GameObject player;
+    private PlayerController pc;
 
     private AudioClip clip;
     private byte[] bytes;
     public bool isRecording = false;
+    public string recordedText;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        recordedText = "";
+        player = GameObject.FindGameObjectWithTag("Player");
+        pc = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -79,6 +84,8 @@ public class SpeechRecognition : MonoBehaviour
         {
             text.color = Color.white;
             text.text = response;
+            recordedText = response;
+            pc.IsPlayerLaughing(response);
         }, error =>
         {
             text.color = Color.red;

@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMove();
-        PlayerLaugh();
         PlayerFlip();
     }
 
@@ -37,9 +36,10 @@ public class PlayerController : MonoBehaviour
     }
 
     [ContextMenu("Detects if player is laughing")]
-    private void PlayerLaugh()
+    public void IsPlayerLaughing(string recordedText)
     {
-        if(Input.GetButton("Fire1"))
+
+        if(recordedText.ToLower().Contains("ha"))
         {
             playerLaugh.LaughFn();
             isLaughing = true;
