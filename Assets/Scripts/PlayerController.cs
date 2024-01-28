@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private Laugh playerLaugh;
     public bool isLaughing = false;
+    public bool isMoving = false;
     public int laughter_count;
 
     private bool isFacingRight = true;
@@ -36,6 +37,11 @@ public class PlayerController : MonoBehaviour
             || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             footstepSound.Play();
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
         }
     }
 

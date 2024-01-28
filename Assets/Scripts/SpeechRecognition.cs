@@ -37,6 +37,11 @@ public class SpeechRecognition : MonoBehaviour
         {
             StopRecording();
         }
+
+        if (pc.isMoving)
+        {
+            text.text = "Press SPACE to record your laughter \n and spread your joy to other person!";
+        }
     }
 
     private void StartRecording()

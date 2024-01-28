@@ -5,7 +5,6 @@ using UnityEngine;
 public class Greyscale : MonoBehaviour
 {
     [SerializeField] GameObject room;
-
     public GameObject player;
     private SpriteRenderer this_renderer;
     private PlayerController pc;
@@ -49,6 +48,7 @@ public class Greyscale : MonoBehaviour
                 }
             }
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
