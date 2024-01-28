@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8dd991ddf33d3a54e881c65bb3d480bd, type: 2}
+  - {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,8 +151,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Debugging Programmer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d7b9ab9f078c9f844b81a9066f7a3585, type: 2}
-  m_sharedMaterial: {fileID: 3312200850009286515, guid: d7b9ab9f078c9f844b81a9066f7a3585, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 015c10c1eea3ef9469e77ccaac554f85, type: 2}
+  m_sharedMaterial: {fileID: 4985093412014893526, guid: 015c10c1eea3ef9469e77ccaac554f85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
