@@ -12,7 +12,7 @@ public class Greyscale : MonoBehaviour
     public float currTime = 0f;
     public float maxTime = 1f;
 
-    public int alpha_increase_speed = 10;
+    public int alpha_increase_speed = 50;
 
     [HideInInspector]
     public bool isHappy = false;
@@ -36,7 +36,7 @@ public class Greyscale : MonoBehaviour
             {
                 if (!isHappy)
                 {
-                    currTime += 0.01f * pc.laughter_count * alpha_increase_speed;
+                    currTime += 0.05f * pc.laughter_count * alpha_increase_speed;
                     this_renderer.color = Color.Lerp(Color.black, Color.white, currTime);
                     pc.isLaughing = false;
                     pc.laughter_count = 0;

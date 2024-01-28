@@ -40,7 +40,7 @@ public class SpeechRecognition : MonoBehaviour
 
         if (pc.isMoving)
         {
-            text.text = "Press SPACE to record your laughter \n and spread your joy to other person!";
+            text.text = "Hold SPACE and laugh into the microphone \n and spread your joy to other person!";
         }
     }
 

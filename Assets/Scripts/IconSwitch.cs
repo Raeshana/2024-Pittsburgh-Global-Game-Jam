@@ -8,7 +8,7 @@ public class IconSwitch : MonoBehaviour
     [SerializeField] Greyscale person;
     private Image image;
 
-    [SerializeField] ExitScript exit;
+    //[SerializeField] ExitScript exit;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class IconSwitch : MonoBehaviour
         if(person.isHappy)
         {
             image.color = Color.white;
-            exit.AddCount();
+            //exit.AddCount();
         }
     }
 }
