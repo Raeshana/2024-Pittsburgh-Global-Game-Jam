@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4550222681989066503}
   - component: {fileID: 7335472983157719730}
+  - component: {fileID: 6257993459646299460}
   m_Layer: 0
   m_Name: Greyscale
   m_TagString: Untagged
@@ -84,6 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6257993459646299460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164095172091058514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea070f5291a4454a9d4f7a99111e499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  person: {fileID: 7099221509978140224}
+  newSprite: {fileID: 21300000, guid: f2618e0a67a0f1b42833ff0da46fb68e, type: 3}
 --- !u!1 &4688735518499368141
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +347,6 @@ GameObject:
   - component: {fileID: 6121732498692540871}
   - component: {fileID: 6340858602817073844}
   - component: {fileID: 7099221509978140224}
-  - component: {fileID: 572740530050480950}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -449,18 +463,6 @@ MonoBehaviour:
   alpha_increase_speed: 5
   isHappy: 0
   isInRange: 0
---- !u!114 &572740530050480950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5716127123658840290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea070f5291a4454a9d4f7a99111e499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6597576710965112977
 PrefabInstance:
   m_ObjectHideFlags: 0
