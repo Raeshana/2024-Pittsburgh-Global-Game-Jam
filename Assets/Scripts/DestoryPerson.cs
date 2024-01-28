@@ -13,9 +13,9 @@ public class DestoryPerson : MonoBehaviour
 
     void Update()
     {
-        if(person.isHappy)
-        {
-            Destroy(gameObject);
-        }
+        //if(person.isHappy)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }
