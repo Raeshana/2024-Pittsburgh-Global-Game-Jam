@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExitScript : MonoBehaviour
 {
     private SceneController sc;
+    private int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -12,9 +13,15 @@ public class ExitScript : MonoBehaviour
         sc = GetComponent<SceneController>();
     }
 
+    public void AddCount()
+    {
+        count++;
+        Debug.Log(count);
+    }
+
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Player")
+        if(col.gameObject.tag == "Player" && count == 5)
         {
             sc.GoToWinScreen();
         }
