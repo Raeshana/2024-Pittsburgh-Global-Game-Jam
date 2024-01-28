@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4550222681989066503}
   - component: {fileID: 7335472983157719730}
   m_Layer: 0
-  m_Name: Colored
+  m_Name: Greyscale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,10 +442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d880ab759c19844bad632b438ad649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colored: {fileID: 164095172091058514}
+  room: {fileID: 0}
   player: {fileID: 7518652352164772469, guid: 73beda7f256be30478b8c62d73822458, type: 3}
-  currAlpha: 0
-  maxAlpha: 1
+  currTime: 0
+  maxTime: 1
   alpha_increase_speed: 5
   isHappy: 0
   isInRange: 0

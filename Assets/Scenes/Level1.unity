@@ -20811,6 +20811,10 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 318757486}
+    - target: {fileID: 7335472983157719730, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -63084,6 +63088,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ab7aaf1b7a749a04489b96e50dec8b03, type: 3}
+    - target: {fileID: 7335472983157719730, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
     - target: {fileID: 9009396855601737208, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
       propertyPath: m_text
       value: Unsuccessful Businessman
@@ -63219,6 +63227,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cc5517847a8f8e14c96a01e3d754b992, type: 3}
+    - target: {fileID: 7335472983157719730, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
     - target: {fileID: 9009396855601737208, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
       propertyPath: m_text
       value: Lonely Child
@@ -63450,6 +63462,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7e9f40334f2e80548b94a01441100d0d, type: 3}
+    - target: {fileID: 7335472983157719730, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
     - target: {fileID: 9009396855601737208, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
       propertyPath: m_text
       value: Student with an F
@@ -63557,6 +63573,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 179e03a7f1e1dc34fa21d417fadd047f, type: 3}
+    - target: {fileID: 7335472983157719730, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7f6b34aa014ae4c880dd75e5a24c2a, type: 2}
     - target: {fileID: 9009396855601737208, guid: 020c70cc6f6b0684fa56742ba82c5e6f, type: 3}
       propertyPath: m_text
       value: Abandoned Dog
@@ -71013,11 +71033,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.03
+      value: -18.99
       objectReference: {fileID: 0}
     - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.24
+      value: 19.85
       objectReference: {fileID: 0}
     - target: {fileID: 1252259609611923934, guid: 73beda7f256be30478b8c62d73822458, type: 3}
       propertyPath: m_LocalPosition.z
