@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Greyscale : MonoBehaviour
 {
-    [SerializeField] GameObject colored;
+    [SerializeField] GameObject room;
     public GameObject player;
     private SpriteRenderer this_renderer;
     private PlayerController pc;
-    //private Rigidbody2D rb;
 
-    public float currAlpha = 0f;
-    public float maxAlpha = 1f;
+    public float currTime = 0f;
+    public float maxTime = 1f;
 
     public int alpha_increase_speed = 5;
-
-    //private HappinessBar happinessBar;
 
     [HideInInspector]
     public bool isHappy = false;
@@ -24,14 +21,11 @@ public class Greyscale : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this_renderer = colored.GetComponent<SpriteRenderer>();
+        this_renderer = room.GetComponent<SpriteRenderer>();
         pc = player.GetComponent<PlayerController>();
         //rb = GetComponent<Rigidbody2D>();
 
-        //happinessBar = GetComponentInChildren<HappinessBar>();
-        //happinessBar.SetMax(maxAlpha);
-
-        this_renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
+        this_renderer.color = Color.black;
     }
 
     private void Update()
@@ -42,14 +36,13 @@ public class Greyscale : MonoBehaviour
             {
                 if (!isHappy)
                 {
-                    currAlpha += 0.01f * pc.laughter_count * alpha_increase_speed;
-                    this_renderer.color = new Color(1.0f, 1.0f, 1.0f, currAlpha);
-                    //happinessBar.UpdateBar(currAlpha);
+                    currTime += pc.laughter_count * alpha_increase_speed;
+                    this_renderer.color = Color.Lerp(Color.black, Color.white, currTime);
                     pc.isLaughing = false;
                     pc.laughter_count = 0;
                 }
 
-                if (currAlpha >= maxAlpha)
+                if (currTime >= maxTime)
                 {
                     isHappy = true;
                 }
